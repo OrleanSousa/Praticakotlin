@@ -1,13 +1,17 @@
 package com.example.demo
 
 class Cliente(val nome: String) {
+    // cria a lista de telefones
       val telefones = mutableListOf<Telefone>()
+    //garante que pode ser vazio ou nulo
       private var numeroPreferencial: Telefone? = null
 
+    // função para adicionar o telefone
       fun adicionarTelefone(telefone: Telefone) {
             telefones.add(telefone)
       }
 
+    // define numero preferencial a cliente
       fun definirNumeroPreferencial(telefone: Telefone): Boolean {
             if (telefones.contains(telefone)) {
                   numeroPreferencial = telefone
@@ -16,10 +20,12 @@ class Cliente(val nome: String) {
             return false
       }
 
+    // adiciona o numero preferencial
       fun getNumeroPreferencial(): Telefone? {
             return numeroPreferencial
       }
 
+    //sobrescreve para imprimir todos os numeros de telfone caso aja algum, e caso não indica nenhum
       override fun toString(): String {
             val sb = StringBuilder()
             sb.append("Nome do Cliente: $nome\n")
