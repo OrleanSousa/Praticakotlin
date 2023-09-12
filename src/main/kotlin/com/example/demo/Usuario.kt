@@ -16,8 +16,7 @@ class Cliente(val nome: String) {
             if (telefones.contains(telefone)) {
                   numeroPreferencial = telefone
                   return true
-            }
-                return false
+            }else return false
 
       }
 
