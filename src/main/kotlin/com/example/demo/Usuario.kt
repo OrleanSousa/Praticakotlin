@@ -17,7 +17,8 @@ class Cliente(val nome: String) {
                   numeroPreferencial = telefone
                   return true
             }
-            return false
+                return false
+
       }
 
     // adiciona o numero preferencial
@@ -45,7 +46,7 @@ class Telefone(val numero: Int)
 
 fun main() {
             val cliente1 = Cliente("João")
-            val telefone1 = Telefone(123456789)
+            val telefone1 = Telefone(123456478)
             val telefone2 = Telefone(987654321)
             val telefone3 = Telefone(784582154)
             cliente1.adicionarTelefone(telefone1)
